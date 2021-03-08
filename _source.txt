@@ -1,0 +1,28 @@
+Tutorial:
+https://www.youtube.com/watch?v=ldYcgPKEZC8&t=33s
+
+
+>> POSTGRESQL
+
+psql 
+
+// Display databases
+postgres=# \l 
+
+// Connect to database
+\c database_name
+
+// Display tables
+\dt
+
+// CReate databases
+CREATE DATABASE perntodo;
+
+// INSert and return form DATABASE
+INSERT INTO todo (description) VALUES($1) RETURNING *
+
+// UPDATE
+UPDATE todo SET description=$1 WHERE todo_id=$2
+
+// DELETE
+DELETE FROM todo WHERE todo_id=$1
